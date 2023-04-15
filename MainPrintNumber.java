@@ -8,6 +8,11 @@ public class MainPrintNumber {
 			Thread t = new Thread(np);
 			t.start();
 		}
+		
+		ExecutorService exe=Executors.newFixedThreadPool(5);
+		Future<Interger> futureI = exe.submit(new NumberPrinterCallable());
+
+		Integer i = futureI.get();
 
 	}
 
