@@ -1,0 +1,14 @@
+public class NumberPrinterCallable implements Callable{
+
+int num;
+
+public void NumberPrinterCallable(){}
+
+public void NumberPrinterCallable(int num){
+thi.num=num;}
+
+public Integer call() throws Exception{
+retunr(Random.nextInt());
+}
+
+}
