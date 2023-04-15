@@ -1,0 +1,24 @@
+main(){
+thread t1,t2
+t1.start()
+t1.join()
+t2.start()
+t2.join()
+
+main thread starts
+t1 starts and main waits for it to finish
+then main starts t2 and waits for it to finish
+main finishes
+
+t1.join(1000)-> after 1000millisc of start of t1, main will start t2 , won't wait for it to finish as above
+
+yield() -> thread goes to runnable state from running for unpredicatable time & can be pic ked by scheduler any time to run
+sleep() -> time can be specified for sleeping
+wait()-> method of Object class ,  When it is called by a thread on an object, thread will wait for other threads on the object to release object monitor
+by calling notify() or  otifyAll()
+
+multiple threads exists on same object. Only one thread can hold object monitor at a time.
+
+
+**wait(), notify()  and notifyAll() methods are always called from Synchronized block
+	yield(),join(),sleep() are not.
