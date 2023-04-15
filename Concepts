@@ -19,6 +19,16 @@ by calling notify() or  otifyAll()
 
 multiple threads exists on same object. Only one thread can hold object monitor at a time.
 
-
 **wait(), notify()  and notifyAll() methods are always called from Synchronized block
 	yield(),join(),sleep() are not.
+
+sleep()->running to waiting
+yield()->running to runnable
+
+wait()->running to waiting , object lock released
+notify()->waiting to running
+
+IllegalThreadStateException
+->If setDaemon(boolean on) is called on thread after calling start() method 
+->if start() called on a thread twice
+
