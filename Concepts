@@ -32,3 +32,13 @@ IllegalThreadStateException
 ->If setDaemon(boolean on) is called on thread after calling start() method 
 ->if start() called on a thread twice
 
+Callable -> like runnable, but callable objects can return an object of type Future
+Future-> waits for Callable to finish execution
+Runnable-> creates threads, can't return anything
+ExecutorService
+executor.submit()
+executor.execute(), executor.shutdown()
+
+
+
+Executors
