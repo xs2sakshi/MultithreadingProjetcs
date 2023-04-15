@@ -6,7 +6,7 @@ public class MainPrintNumber {
 		for(int i=0;i<100;i++){
 			NumberPrinter np=new NumberPrinter(i);
 			Thread t = new Thread(np);
-			t.run();
+			t.start();
 		}
 
 	}
